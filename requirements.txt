@@ -17,3 +17,4 @@ streamlit
 python-dotenv
 numpy
 langchain-openai
+ipykernel
