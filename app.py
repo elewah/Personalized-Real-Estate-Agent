@@ -100,18 +100,18 @@ else:
                     if recommendations:
                         best_listing_description = select_best_listing_and_describe(user_prefs_str, recommendations)
                         
-                        st.session_state.messages.append({"role": "assistant", "content": "Here are the top recommendations for you:"})
-                        with st.chat_message("assistant"):
-                            st.markdown("Here are the top recommendations for you:")
+                        # st.session_state.messages.append({"role": "assistant", "content": "Here are the top recommendations for you:"})
+                        # with st.chat_message("assistant"):
+                        #     st.markdown("Here are the top recommendations for you:")
 
-                        for rec in recommendations:
-                            pid, title, address, price, desc, img_url = rec
-                            with st.chat_message("assistant"):
-                                st.image(img_url, caption=f"Image of {title}", width=200)
-                                st.markdown(f"**{title}**")
-                                st.markdown(f"**Address:** {address}")
-                                st.markdown(f"**Price:** ${price:,.2f} CAD")
-                                st.markdown(f"**Description:** {desc}")
+                        # for rec in recommendations:
+                        #     pid, title, address, price, desc, img_url = rec
+                        #     with st.chat_message("assistant"):
+                        #         st.image(img_url, caption=f"Image of {title}", width=200)
+                        #         st.markdown(f"**{title}**")
+                        #         st.markdown(f"**Address:** {address}")
+                        #         st.markdown(f"**Price:** ${price:,.2f} CAD")
+                        #         st.markdown(f"**Description:** {desc}")
 
                         st.session_state.messages.append({"role": "assistant", "content": best_listing_description})
                         with st.chat_message("assistant"):
